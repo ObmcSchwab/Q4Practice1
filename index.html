@@ -6,16 +6,22 @@
     <title>Q4 Practice1</title>
 </head>
 <body>
-    <h1> JavaScript Conditional Statement</h1>
+    <h1>JavaScript Conditional Statements</h1>
 
+    <input type="text" class="form-control" id="Age" placeholder="type here...">
     <button class="btn btn-info" onclick="checkAge()">Check</ button>
 
         <script>
             function checkAge(){
-                if (19<18){
+                var Age = document.getElementById(Age). value;
+                
+                if (isNaN(Age)) || (Age < 0){
+                    alert("Please input a valid number.")
+                }
+                else if (Age>18){
                     alert("You are underage.")
                 }
-                else if(19>18){
+                else if(Age>18){
                     alert("You are of legal age")
                 }
                 else{
